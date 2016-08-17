@@ -180,13 +180,231 @@
 2.文件编码统一使用UTF-8且保证无BOM
 
 ***
-## js书写规范
+## js书写规范(ES5)
+
+
+###变量命名
+1.普通变量使用驼峰命名法
+```js
+// bad
+var projectname;
+
+// good
+var projectName;
+```
+2.常量全部大写，如果有多个单词用下划线分割
+```js
+// bad
+var defaultErrCode = -1;
+
+// good
+var DEAFULT_ERR_CODE = -1;
+```
+3.构造函数第一个字母大写
+```js
+// bad
+function person(name) {
+    this.name = name;
+}
+
+// good
+function Person(name) {
+    this.name = name;
+}
+```
+
 
 ###缩进
 缩进使用tab（4个空格长度）
 
 ###空格
+1.对象属性冒号后加空格，前面不加
+```js
+// bad
+var a = {
+    b :1
+};
 
+// good
+var a = {
+    b: 1
+};
+```
+2.代码块花括号{左侧需要一个空格
+
+```javascript
+// bad
+if (condition){
+}
+
+while (condition){
+}
+
+function funcName(){
+}
+
+// good
+if (condition) {
+}
+
+while (condition) {
+}
+
+function funcName() {
+}
+
+```
+3.函数多个参数之间要有空格
+```
+// bad
+var doSomething = function(a,b,c) {
+    // do something
+};
+
+// good
+var doSomething = function(a, b, c) {
+    // do something
+};
+
+```
+4.if, else, for, while, do, switch, case, try, catch, finally, return, typeof 关键词后必须有空格
+```
+// bad
+var doSomething;
+if(doSomething){
+    // do some..
+}else{
+    // else...
+}
+
+// good
+var doSomething;
+if (doSomething){
+    // do some..
+} else {
+    // else...
+}
+```
+5.数组和对象里的元素,`{}` 和 `[]` 内紧贴括号部分不允许包含空格，数组多个元素考虑换行
+```javascript
+// bad
+var arr1 = [ ];
+var arr2 = [ 1, 2, 3 ];
+var obj1 = { };
+var obj2 = { name: 'obj' };
+var obj3 = {name: 'obj', age: 20, sex: 1};
+
+// good
+var arr1 = [];
+var arr2 = [1, 2, 3];
+var obj1 = {};
+var obj2 = {name: 'obj'};
+var obj3 = {
+    name: 'obj',
+    age: 20,
+    sex: 1
+};
+```
+6.单行注释符号必须跟一个空格，多行注释最少3行且*号后面需要一个空格
+```javascript
+// bad
+//这是一个不好的单行注释
+var arr1 = [ ];
+
+/*
+ *no space after '*', bad example
+ */
+var x = 1;
+
+// good
+// 这样的注释是OK的
+var arr2 = [];
+
+/*
+ * one space after '*', it is good
+ */
+var x = 1;
+
+```
+
+
+###换行
+1.每行最多120个半角字符;
+
+2.代码块'{'后和'}'前需要换行, 代码块'{'前不要换行
+```
+//bad
+function test()
+{
+    // ...
+}
+//bad
+if (condition) {
+    // ...
+} 
+else {
+    // ...
+}
+
+
+//good
+function test() {
+    // ...
+}
+
+//good
+if (condition) {
+    // ...
+} else {
+    // ...
+}
+
+```
+
+3.多个参数或元素需要换行的时候，保证逗号结尾换行
+```
+//bad
+var arr = [1,2,3,4,5,6
+,7,8,9,10]
+
+//good
+var arr = [1,2,3,4,5,
+            6,7,8,9,10]
+
+```
+
+4.连续的函数调用的时候，保证换行后.在前面
+```
+//bad
+var dom = $("body").find(".area").
+children().eq(0);
+
+//good
+var dom = $("body").find(".area")
+    .children().eq(0);
+
+```
+
+5.函数定义结束，或者逻辑上有区分的代码块，需要换行
+```
+//bad
+var f = function() {
+    // ...
+}
+var f2 = function() {
+    // ...
+}
+
+//good
+var f = function() {
+    // ...
+}
+
+var f2 = function() {
+    // ...
+}
+
+```
 
 
 ## FAQ
