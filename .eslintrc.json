@@ -1,0 +1,90 @@
+{
+  // http://eslint.org/docs/rules/
+
+  "env": {
+    "browser": true,      // browser global variables.
+    "node": true,        // Node.js global variables and Node.js-specific rules.
+    "amd": true,
+    "commonjs": true,
+    "jquery": true,
+    "es6": false         // enable all ECMAScript 6 features except for modules.
+  },
+
+  "globals": {
+
+  },
+
+  "plugins": [
+    // e.g. "react" (must run `npm install eslint-plugin-react` first)
+  ],
+
+  "rules": {
+
+    // Possible Errors
+    "no-extra-semi": 1,            // disallow unnecessary semicolons
+    "no-inner-declarations": 2,    // disallow function or variable declarations in nested blocks
+
+
+    // Best Practices
+    "curly": 2,                 // specify curly brace conventions for all control statements
+    "camelcase": 2,             //驼峰命名
+    "comma-dangle": [2, "never"],//数组最后不能有逗号
+    "comma-style": [2, "last"],//逗号风格，换行时在行首还是行尾
+    "computed-property-spacing": [2,"never"],//以方括号取对象属性时，[ 后面和 ] 前面是否需要空格, 可选参数 never, always
+    "dot-location": [2, "property"],//.和属性必须在同一行
+
+    "no-eval": 2,               // disallow use of eval()
+    "no-extend-native": 2,      // disallow adding to native types
+    "no-new-wrappers": 2,       // disallows creating new instances of String, Number, and Boolean
+    "no-with": 2,               // disallow use of the with statement
+    "no-alert": 2,              //不允许alert
+    "no-console": 1,            //不允许console
+    "no-debugger": 2,           //不允许debugger
+    "no-dupe-args": 2,
+    "no-dupe-keys": 2,
+    "no-duplicate-case": 2,
+    "no-undef": 2,
+    "no-unreachable": 2,        //不能有无法执行的代码
+    "no-multi-spaces": 2,
+    "no-array-constructor": 2,             // disallow use of the Array constructor
+    "no-mixed-spaces-and-tabs": 2,         // disallow mixed spaces and tabs for indentation
+    "no-multiple-empty-lines": [2, { "max": 3 }],
+    "no-unreachable": 2,
+    "no-unused-expressions": 2,
+    "no-unused-vars": [2, { "vars": "all", "args": "none" }],
+    "no-unused-labels": [1],
+    "no-lone-blocks": 2,                   //多余的{}嵌套
+
+    "space-after-keywords": [2, "always"],//关键字后面是否要空一格
+    "space-before-blocks": [2, "always"],//不以新行开始的块{前面要不要有空格
+    "space-before-function-paren": [0, "always"],//函数定义时括号前面要不要有空格
+    "space-in-parens": [2, "never"],//小括号里面要不要有空格
+
+
+
+    // Strict Mode
+
+
+    // Variables
+    "no-undef": 2,                   // disallow use of undeclared variables unless mentioned in a /*global */ block
+
+
+    // Node.js
+
+
+    // Stylistic Issues
+    "array-bracket-spacing": [2, "never"], // enforce spacing inside array brackets (off by default)
+    "indent": [2, "tab"],                  // this option sets a specific tab width for your code (off by default)
+
+    //"no-new-object": 2,                    // disallow use of the Object constructor
+    "object-curly-spacing": [2, "never"],  // require or disallow padding inside curly braces (off by default)
+    "semi": 2,                             // require or disallow use of semicolons instead of ASI
+
+
+    // ECMAScript 6
+
+
+    // Legacy
+    "max-len": [1, 120, 2] // specify the maximum length of a line in your program (off by default)
+  }
+}
