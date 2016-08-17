@@ -1,6 +1,6 @@
 
 
-# 前端项目编码规范v0.2 --by linktang
+# 前端项目编码规范v0.2
 
 ***
 
@@ -406,9 +406,33 @@ var f2 = function() {
 
 ```
 
+###引号
+1.正常使用情况下统一使用单引号' 对象属性正常情况不需要引号，如果确实需要引号则都要加上单引号
+```
+// bad
+var util = require("cos/lib/util");
+var str = "str";
+var obj = {
+	"a": 1
+}
+
+// good
+var util = require('cos/lib/util');
+var str = 'str';
+var obj = {
+	'a': 1
+}
+```
+
+###代码风格检查工具
+
+1.统一使用Eslint，配置文件参考本项目的.eslintrc.json
+
+2.提交代码之前必须解决所有Eslint提示错误的地方，解决之后再提交，大家互相监督，有犯错的话请吃饮料；
+
 
 ## FAQ
 
-lastModified by lintkang
+LastModified by lintkang
 
 
